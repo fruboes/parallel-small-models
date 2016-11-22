@@ -162,8 +162,9 @@ with tf.Session(graph=graph, config=config) as session:
 
   todo_run = {}  
   for name_, dict_ in {"optimizers" : optimizers, 
-                       "losses": losses,
-                       "train_preds": train_preds}.items():
+                       #"losses": losses,
+                       #"train_preds": train_preds
+                       }.items():
     for k,v in dict_.items():
         todo_run[name_ + ":" + k] = v
 
